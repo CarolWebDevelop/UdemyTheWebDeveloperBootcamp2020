@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--
+    Author:  Carol Kelly
+    Date Started:  12/23/2020
+    Last Date Updated:  12/23/2020
+    What does this do:  VERSION 2 - Refactoring
+                        This version removes repetive coding.
+                        Keeps the score for a Ping Pong game
+                        Udemy - The Web Developer Bootcamp 2020 project
+    Personal Notes: This was a start from scratch project.  I did use the 
+                    files I have been working on (broilerPlate.HTML & script.js) to 
+                    start the project.  We started by building just the HTML and Javascript.
+                    He then introduced a new framework option called bulma.  It is 
+                    different from bootstap, but I think I like the logical classes that 
+                    they use.
+                    
+-->
+
+<html lang="en">
+
+<head>
+    <!--Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Website tab title-->
+    <title>Score Keeper</title>
+    
+    <!--Google Fonts-->
+
+    <!--External CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+
+    <!--Custom CSS-->
+
+</head>
+<body>
+    <!--
+        After we developed the site without any real styling this div was setup using
+        a framework called Bulma.  The website to get information about this is bulma.io.
+    -->
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <!--
+                    This div classes set the card to be half of the container and centered.
+                    I'm not really certain why is-offset-one-quarter makes is half, but he 
+                    explained that since it is taking up 50% of the area, 25% on eaither 
+                    side would center it and logically that makes sense.
+                -->
+                <div class="column is-half is-offset-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="img/pingPongPaddles.jpg" alt="Pingpong Paddles">
+                            </figure>
+                        </div>
+    
+                        <header class="card-header">
+                          <p class="card-header-title">Ping Pong Score Keeper</p>
+                        </header>
+            
+                        <div class="card-content">
+                            <div class="content">
+                                <!--Displays the current score of the game.-->
+                                <h1 class="title-is-1"><span id="p1ScoreDisplay">0</span> and <span id = "p2ScoreDisplay">0</span></h1>
+                                <!--Directions for use-->
+                                <p class="subtitle">Use the buttons below to keep score.</p>
+                        
+                                <!--Allows the user to choose how many points it takes to win the game.-->                        
+                                <label for="scoreNeededToWin" class="label is-large is-inline">Playing to: </label>
+                                <div class="select is-rounded">
+                                    <select name="" id="scoreNeededToWin">
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>  
+    
+                        <footer class="card-footer">
+                            <!--Allows the user to update the score or reset the game.-->
+                            <button id="p1Button" class="is-primary button card-footer-item is-large">+1 Player 1</button>
+                            <button id="p2Button" class="is-info button card-footer-item is-large">+1 Player 2</button>
+                            <button id="resetButton" class="is-danger button card-footer-item is-large">Reset</button>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Connects to the external javascript file.-->
+    <script src="script.js"></script>
+</body>
+</html>
